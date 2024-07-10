@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room View</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add any additional stylesheets or scripts here -->
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h3>Create a new room</h3>
+            <button class="btn btn-primary" onclick="createRoomOnClient()">Create Room</button>
+        </div>
+
+        <hr />
+
+        <div>
+            <h3>Join an existing room:</h3>
+            <form id="joinRoomForm" onsubmit="joinRoom(); return false;">
+                <div class="form-group">
+                    <label for="roomId">Room ID:</label>
+                    <input type="text" class="form-control" id="roomId" name="roomId" placeholder="Enter Room ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Join Room</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add any additional scripts here -->
+   
+    <script src="~/js/signalr.js"></script>
+    <script src="~/js/homeHub.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+ 
+    </script>
+</body>
+</html>
+

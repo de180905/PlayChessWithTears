@@ -1,0 +1,31 @@
+﻿@using OnlineChess.Models.DTO
+@model List<MatchDTO>
+@{
+    ViewData["Title"] = "Player History";
+}
+
+<div class="container mt-5">
+    <h1>Player History</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Black</th>
+                <th scope="col">White</th>
+                <th scope="col">Time</th>
+                <th scope="col">Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var match in Model)
+            {
+                <tr>
+                    <td>@match.Black</td>
+                    <td>@match.White</td>
+                    <td>@match.Time</td>
+                    <td>@match.Result</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
